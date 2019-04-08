@@ -1,12 +1,13 @@
 from flask import Flask, request
 from flask_restful import Resource
-
 app = Flask(__name__)
-
+api = Api(app)
+app.secret_key = "fAv?\OH???fY\0"
 import os
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] ="/home/ubuntu/rcs_mwc_receipt_api/src/SEAT-NINJA.json"
 PROJECT_ID = "seatninja-8b96a"
 SESSION_ID = "860ff14ccd004e9eb4e2fac49acb454c"
+
 def detect_intent_texts(project_id, session_id, text, language_code, phoneNumber):
      context_short_name = "doesnotmatter"
 
@@ -46,6 +47,6 @@ class Diagflow(Resource):
                 "intent": intent,
                 "fullfill": fullfill
                 }
-
+api.add_resource(Diagflow, "/api/diagflow/intent")
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0',port=4041)
