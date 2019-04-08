@@ -4,9 +4,9 @@ app = Flask(__name__)
 api = Api(app)
 app.secret_key = "fAv?\OH???fY\0"
 import os
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] ="/Users/thotra/Desktop/CLX/Dialogflow/SEAT-NINJA.json"
-PROJECT_ID = "seatninja-8b96a"
-SESSION_ID = "860ff14ccd004e9eb4e2fac49acb454c"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] ="Your Path"
+PROJECT_ID = "PROJECT_ID"
+SESSION_ID = "SESSION_ID"
 
 def detect_intent_texts(project_id, session_id, text, language_code, phoneNumber):
      context_short_name = "doesnotmatter"
