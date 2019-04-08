@@ -26,3 +26,5 @@ curl --header "Content-Type: application/json" \
   --data '{"text":"Hello","phone":"+15417773313"}' \
   http://localhost:4041/api/diagflow/intent
 ```
+
+After making the request, this script will re-direct to Dialogflow , and automatically check the Webhook that is already set up on Dialogflow and the response will forward to the bot server. 
