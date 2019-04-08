@@ -1,10 +1,10 @@
 from flask import Flask, request
-from flask_restful import Resource
+from flask_restful import Resource, Api
 app = Flask(__name__)
 api = Api(app)
 app.secret_key = "fAv?\OH???fY\0"
 import os
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] ="/home/ubuntu/rcs_mwc_receipt_api/src/SEAT-NINJA.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] ="/Users/thotra/Desktop/CLX/Dialogflow/SEAT-NINJA.json"
 PROJECT_ID = "seatninja-8b96a"
 SESSION_ID = "860ff14ccd004e9eb4e2fac49acb454c"
 
